@@ -475,6 +475,80 @@ button, input, select, textarea {
     color: var(--white) !important; /* Ensure white text on orange background */
 }
 
+/* === VISIT REAL SITE BUTTON === */
+/* Prominent button to direct users to the actual Bottini Fuel website */
+.nav-cta {
+    margin-left: auto; /* Push to right side of navigation */
+}
+
+.btn-visit-real-site {
+    /* Layout & Positioning */
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 15px !important;
+    margin: 4px 0;
+    
+    /* Typography */
+    font-family: var(--font-primary) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    
+    /* Visual Design - Neon Green Theme */
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+    color: var(--black) !important;
+    border: 2px solid #00ff88;
+    border-radius: 6px;
+    
+    /* Effects */
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.btn-visit-real-site:hover {
+    /* Enhanced hover state */
+    background: linear-gradient(135deg, #00cc6a 0%, #00ff88 100%);
+    border-color: #00cc6a;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+    transform: translateY(-1px);
+    color: var(--black) !important;
+}
+
+.btn-visit-real-site:active {
+    /* Active state */
+    transform: translateY(0);
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
+.btn-visit-real-site i {
+    /* Icon styling */
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+/* Subtle glow animation for extra visibility */
+@keyframes neon-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+    }
+}
+
+.btn-visit-real-site {
+    animation: neon-glow 2.5s ease-in-out infinite;
+}
+
+.btn-visit-real-site:hover {
+    animation: none; /* Stop glow on hover */
+}
+
 /* Pixel Perfect Designs Logo Section */
 .pixel-logo-section {
     background-color: var(--white);
@@ -1624,6 +1698,23 @@ button, input, select, textarea {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
+    }
+    
+    /* Visit Real Site Button - Mobile */
+    .nav-cta {
+        margin-left: 0; /* Reset margin on mobile */
+        order: -1; /* Move to top of navigation */
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .btn-visit-real-site {
+        font-size: 15px !important;
+        padding: 8px 18px !important;
+        border-radius: 6px;
+        width: auto;
+        display: inline-flex !important;
     }
     
     /* === HERO SECTION RESPONSIVE === */
